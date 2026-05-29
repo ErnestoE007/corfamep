@@ -15,7 +15,12 @@ const PRODUCTS = [
 
 export const Products = () => {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', ...Array.from(new Set(PRODUCTS.map(p => p.category)))];
+  const categories = ['All', ...PRODUCTS.reduce((acc: string[], curr) => {
+    if (!acc.includes(curr.category)) {
+      acc.push(curr.category);
+    }
+    return acc;
+  }, [])];
 
   const filtered = filter === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
 
