@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 
 interface PremiumButtonProps extends HTMLMotionProps<"button"> {
   variant?: 'primary' | 'secondary' | 'outline';
+  children: React.ReactNode;
 }
 
 export const PremiumButton = ({ variant = 'primary', className, children, ...props }: PremiumButtonProps) => {
