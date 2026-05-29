@@ -1,11 +1,10 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-interface PremiumButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface PremiumButtonProps extends HTMLMotionProps<"button"> {
   variant?: 'primary' | 'secondary' | 'outline';
-  children: React.ReactNode;
 }
 
 export const PremiumButton = ({ variant = 'primary', className, children, ...props }: PremiumButtonProps) => {
