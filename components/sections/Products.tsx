@@ -1,35 +1,25 @@
 "use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { GlassCard } from '../ui/GlassCard';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { motion, AnimatePresence } from 'framer-motion';
-
-const PRODUCTS = [
-  { id: 1, category: 'Machinery', name: 'Hyper-Press 500', desc: 'Precision industrial pressing for heavy-duty structural components.' },
-  { id: 2, category: 'Electronics', name: 'Smart-Control Hub', desc: 'AI-driven automation center for real-time industrial monitoring.' },
-  { id: 3, category: 'Machinery', name: 'Turbo-Mill X', desc: 'High-speed CNC milling with micron-level precision.' },
-  { id: 4, category: 'Electronics', name: 'Quantum-Sentry', desc: 'Advanced sensory array for predictive maintenance.' },
-  { id: 5, category: 'Machinery', name: 'Omni-Forge 2.0', desc: 'Next-generation additive manufacturing system.' },
-  { id: 6, category: 'Electronics', name: 'Flux-Capacitor Core', desc: 'Energy stabilization unit for high-power facilities.' },
-];
+import { PRODUCTS } from '@/constants/products';
 
 export const Products = () => {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', ...PRODUCTS.reduce((acc: string[], curr) => {
-    if (!acc.includes(curr.category)) {
-      acc.push(curr.category);
-    }
-    return acc;
-  }, [])];
+  const categories = ['All', ...Array.from(new Set(PRODUCTS.map(p => p.category)))];
 
   const filtered = filter === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
 
   return (
     <AnimatedSection>
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-starlight mb-4">Industrial Showroom</h2>
-        <p className="text-titanium mb-8 max-w-2xl mx-auto">Explore our portfolio of precision-engineered solutions designed for the most demanding environments.</p>
-        <div className="flex justify-center gap-3">
+        <h2 className="text-4xl font-bold text-starlight mb-4">Catálogo de Excelencia</h2>
+        <p className="text-titanium mb-8 max-w-2xl mx-auto">
+          Descubra la línea completa de productos NOOA, donde la ciencia de la higiene se encuentra con la elegancia industrial.
+        </p>
+        <div className="flex justify-center gap-3 flex-wrap">
           {categories.map(cat => (
             <button 
               key={cat}
@@ -42,7 +32,7 @@ export const Products = () => {
         </div>
       </div>
 
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <AnimatePresence mode="popLayout">
           {filtered.map((product) => (
             <motion.div 
@@ -53,12 +43,20 @@ export const Products = () => {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3 }}
             >
-              <GlassCard>
+              <GlassCard className="flex flex-col h-full">
+                <div className="relative w-full h-64 mb-6 overflow-hidden rounded-xl bg-obsidian/50">
+                  <Image 
+                    src={product.image} 
+                    alt={product.name} 
+                    fill 
+                    className="object-contain p-4 hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
                 <span className="text-xs font-bold text-electric-cobalt uppercase tracking-widest">{product.category}</span>
                 <h3 className="text-2xl font-semibold text-starlight mt-2 mb-3">{product.name}</h3>
-                <p className="text-titanium">{product.desc}</p>
+                <p className="text-titanium flex-grow">{product.description}</p>
                 <div className="mt-6 flex justify-end">
-                   <button className="text-sm font-medium text-electric-cobalt hover:underline">View Specs →</button>
+                   <button className="text-sm font-medium text-electric-cobalt hover:underline">Solicitar Cotización →</button>
                 </div>
               </GlassCard>
             </motion.div>
@@ -68,3 +66,4 @@ export const Products = () => {
     </AnimatedSection>
   );
 };
+
