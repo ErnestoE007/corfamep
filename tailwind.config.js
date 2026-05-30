@@ -7,19 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        obsidian: "#0A0C10",
-        "electric-cobalt": "#2E5BFF",
-        titanium: "#8E9AAF",
-        starlight: "#F8FAFC",
-        "plasma-blue": "rgba(46, 91, 255, 0.15)",
+        brand: {
+          light: "#F0F9FF", // Soft Azure
+          primary: "#0EA5E9", // Vibrant Sky Blue
+          secondary: "#22C55E", // Fresh Mint Green
+          dark: "#0C4A6E", // Deep Navy for contrast
+        },
+        starlight: "#FFFFFF",
+        titanium: "#64748b",
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'Inter', 'sans-serif'],
         heading: ['var(--font-montserrat)', 'Montserrat', 'sans-serif'],
-        mono: ['var(--font-jetbrains)', 'JetBrains Mono', 'monospace'],
-      },
-      animation: {
-        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },
