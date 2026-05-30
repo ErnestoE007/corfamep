@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { GlassCard } from '../ui/GlassCard';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PRODUCTS } from '@/constants/products';
@@ -9,22 +8,19 @@ import { PRODUCTS } from '@/constants/products';
 export const Products = () => {
   const [filter, setFilter] = useState('All');
   const categories = ['All', ...Array.from(new Set(PRODUCTS.map(p => p.category)))];
-
   const filtered = filter === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
 
   return (
-    <AnimatedSection className="bg-white">
+    <AnimatedSection className="bg-white py-20">
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-brand-dark mb-4">Catálogo de Excelencia</h2>
-        <p className="text-titanium mb-8 max-w-2xl mx-auto">
-          Descubra la línea completa de productos NOOA, donde la ciencia de la higiene se encuentra con la elegancia profesional.
-        </p>
-        <div className="flex justify-center gap-3 flex-wrap">
+        <h2 className="text-4xl font-bold text-brand-dark mb-4">Nuestros Productos</h2>
+        <div className="w-20 h-1 bg-brand-primary mx-auto mb-8" />
+        <div className="flex justify-center gap-3 flex-wrap mb-12">
           {categories.map(cat => (
             <button 
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-full text-sm transition-all ${filter === cat ? 'bg-brand-primary text-white shadow-md' : 'bg-brand-light text-brand-dark hover:bg-brand-primary/10'}`}
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${filter === cat ? 'bg-brand-primary text-white shadow-md' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}
             >
               {cat}
             </button>
@@ -32,38 +28,37 @@ export const Products = () => {
         </div>
       </div>
 
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <AnimatePresence mode="popLayout">
           {filtered.map((product) => (
             <motion.div 
               key={product.id}
               layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
             >
-              <GlassCard className="flex flex-col h-full bg-white/80 border-brand-primary/10">
-                <div className="relative w-full h-64 mb-6 overflow-hidden rounded-xl bg-brand-light">
-                  <Image 
-                    src={product.image} 
-                    alt={product.name} 
-                    fill 
-                    className="object-contain p-4 hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <span className="text-xs font-bold text-brand-secondary uppercase tracking-widest">{product.category}</span>
-                <h3 className="text-2xl font-semibold text-brand-dark mt-2 mb-3">{product.name}</h3>
-                <p className="text-titanium flex-grow">{product.description}</p>
-                <div className="mt-6 flex justify-end">
-                   <button className="text-sm font-medium text-brand-primary hover:text-brand-dark transition-colors">Solicitar Cotización →</button>
-                </div>
-              </GlassCard>
+              <div className="relative h-56 w-full bg-slate-50 overflow-hidden">
+                <Image 
+                  src={product.image} 
+                  alt={product.name} 
+                  fill 
+                  className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5">
+                <span className="text-[10px] font-bold text-brand-secondary uppercase tracking-widest mb-2 block">{product.category}</span>
+                <h3 className="text-lg font-bold text-brand-dark mb-2 leading-tight">{product.name}</h3>
+                <p className="text-sm text-slate-500 mb-4 line-clamp-2">{product.description}</p>
+                <button className="w-full py-2 text-sm font-semibold text-brand-primary border border-brand-primary rounded-md hover:bg-brand-primary hover:text-white transition-colors">
+                  Detalles
+                </button>
+              </div>
             </motion.div>
           ))}
         </AnimatePresence>
-      </motion.div>
+      </div>
     </AnimatedSection>
   );
 };
-

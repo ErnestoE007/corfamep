@@ -1,41 +1,58 @@
 "use client";
-import { motion } from 'framer-motion';
+import React from 'react';
+import Image from 'next/image';
 import { PremiumButton } from '../ui/PremiumButton';
-import { AnimatedSection } from '../ui/AnimatedSection';
 
 export const Hero = () => {
   return (
-    <AnimatedSection className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-      {/* Luminous Background Orbs */}
-      <div className="absolute top-1/4 -left-20 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px] animate-pulse" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand-secondary/10 rounded-full blur-[120px] animate-pulse delay-700" />
+    <section className="relative w-full min-h-screen flex items-center bg-white overflow-hidden">
+      {/* Background Accents - Subtle and Professional */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-light -skew-x-12 translate-x-20 z-0" />
       
-      <div className="relative z-10 text-center max-w-5xl">
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-6xl md:text-9xl font-black tracking-tighter text-brand-dark mb-6"
-        >
-          Corfamep
-        </motion.h1>
-        
-        <motion.p 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-xl md:text-2xl text-titanium mb-10 max-w-2xl mx-auto leading-relaxed font-medium"
-        >
-          Pureza Impecable, Confianza Absoluta. <br />
-          Líderes en fabricación de productos de limpieza profesional en Ecuador.
-        </motion.p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <PremiumButton className="btn-vibrant text-lg px-8 py-4">Ver Productos</PremiumButton>
-          <PremiumButton variant="secondary" className="bg-white text-brand-primary border-brand-primary/20 hover:bg-brand-primary/5 text-lg px-8 py-4">Contáctanos</PremiumButton>
+      <div className="container mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="space-y-8">
+          <motion.h1 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="text-6xl md:text-8xl font-black text-brand-dark leading-tight"
+          >
+            Corfamep
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl md:text-2xl text-titanium max-w-xl leading-relaxed"
+          >
+            Pureza Impecable, Confianza Absoluta. <br />
+            Expertos en la fabricación de productos de limpieza profesional en Ecuador.
+          </motion.p>
+          
+          <div className="flex flex-wrap gap-4">
+            <PremiumButton className="btn-primary">Ver Catálogo</PremiumButton>
+            <PremiumButton variant="secondary">Solicitar Cotización</PremiumButton>
+          </div>
+        </div>
+
+        <div className="relative hidden lg:block">
+          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white">
+             <Image 
+               src="/images/productos/Captura de pantalla 2026-05-28 195208.png" 
+               alt="Productos Corfamep" 
+               width={600} 
+               height={600} 
+               className="w-full h-auto object-cover"
+             />
+          </div>
+          {/* Decorative elements */}
+          <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-secondary rounded-full blur-3xl opacity-20" />
+          <div className="absolute -top-6 -right-6 w-32 h-32 bg-brand-primary rounded-full blur-3xl opacity-20" />
         </div>
       </div>
-    </AnimatedSection>
+    </section>
   );
 };
 
+// Note: I need to import motion here
+import { motion } from 'framer-motion';

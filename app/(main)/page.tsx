@@ -1,3 +1,5 @@
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { Products } from '@/components/sections/Products';
@@ -8,14 +10,18 @@ import { Contact } from '@/components/sections/Contact';
 
 export default function Home() {
   return (
-    <main className="bg-obsidian text-starlight selection:bg-electric-cobalt/30">
-      <Hero />
-      <About />
-      <Products />
-      <Services />
-      <Projects />
-      <Clients />
-      <Contact />
-    </main>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <main>
+        <Hero />
+        <section id="about"><About /></section>
+        <section id="products"><Products /></section>
+        <section id="benefits"><Services /></section>
+        <section id="sustainability"><Projects /></section>
+        <section id="clients"><Clients /></section>
+        <section id="contact"><Contact /></section>
+      </main>
+      <Footer />
+    </div>
   );
 }
