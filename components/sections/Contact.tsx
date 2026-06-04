@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { AnimatedSection } from '../ui/AnimatedSection';
 import { SITE_METADATA } from '@/constants/content';
 import { GlassCard } from '../ui/GlassCard';
+import { PremiumButton } from '../ui/PremiumButton';
 
 export const Contact = () => {
   return (
