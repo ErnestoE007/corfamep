@@ -31,21 +31,3 @@ export const PremiumButton = ({ variant = 'primary', className, children, ...pro
     </motion.button>
   );
 };
-
-
-  return (
-    <motion.button
-      whileHover={{ scale: 1.05, y: -2 }}
-      whileTap={{ scale: 0.95 }}
-      className={cn(
-        "relative px-6 py-3 rounded-full font-medium transition-all duration-300 overflow-hidden group",
-        variants[variant],
-        className
-      )}
-      {...props}
-    >
-      <span className="relative z-10">{children}</span>
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
-    </motion.button>
-  );
-};
