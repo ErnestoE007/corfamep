@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F5F5F7;
+  --color-text-main: #1D1D1F;
+  --color-text-muted: #86868B;
+  --color-accent: #0071E3;
+  --color-border: #D2D2D7;
+
+  /* Custom Shadows */
+  --shadow-premium: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+:root {
+  --background: var(--color-bg-primary);
+  --foreground: var(--color-text-main);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility for "Apple Squircle" buttons */
+.btn-apple {
+  @apply px-6 py-2 rounded-full transition-all duration-300 ease-in-out active:scale-95;
+}
