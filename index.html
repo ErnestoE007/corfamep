@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corfamep Catalog Prototype Â· Apple Inspired</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f7;
+      --surface-warm: #fbfbfd;
+      --fg: #1d1d1f;
+      --fg-2: #424245;
+      --muted: #6e6e73;
+      --meta: #86868b;
+      --border: #d2d2d7;
+      --border-soft: #e8e8ed;
+      --accent: #0071e3;
+      --accent-on: #ffffff;
+      --accent-hover: #0077ed;
+      --accent-active: #0066cc;
+      --font-display: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-body: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 980px;
+      --elev-raised: 0 12px 32px rgba(0, 0, 0, 0.08);
+      --motion-base: 220ms;
+      --ease-standard: cubic-bezier(0.28, 0, 0.22, 1);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .launcher {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 40px;
+    }
+
+    header {
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin: 0 0 12px;
+    }
+
+    p.lead {
+      font-size: 24px;
+      color: var(--muted);
+      max-width: 30ch;
+      margin: 0 auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .screen-card {
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform var(--motion-base) var(--ease-standard), box-shadow var(--motion-base) var(--ease-standard);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      aspect-ratio: 4 / 5;
+      border: 1px solid transparent;
+    }
+
+    .screen-card:hover {
+      transform: scale(1.02);
+      box-shadow: var(--elev-raised);
+      border-color: var(--border);
+    }
+
+    .screen-card h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+
+    .screen-card p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--accent);
+      color: white;
+      border-radius: var(--radius-pill);
+      font-size: 12px;
+      font-weight: 600;
+      align-self: flex-start;
+      margin-top: 20px;
+    }
+
+    .preview-stub {
+      width: 100%;
+      height: 180px;
+      background: white;
+      border-radius: var(--radius-md);
+      margin-bottom: 24px;
+      display: grid;
+      place-items: center;
+      color: var(--border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: 1px solid var(--border-soft);
+    }
+  </style>
+</head>
+<body>
+  <div class="launcher">
+    <header>
+      <h1>CatÃ¡logo Corfamep</h1>
+      <p class="lead">Prototipo de experiencia premium inspirado en Apple.</p>
+    </header>
+
+    <div class="grid">
+      <a href="screens/landing.html" class="screen-card">
+        <div>
+          <div class="preview-stub">Landing Preview</div>
+          <h2>Landing Page</h2>
+          <p>Experiencia cinemÃ¡tica de presentaciÃ³n de marca y productos estrella.</p>
+        </div>
+        <span class="badge">Pantalla 1</span>
+      </a>
+
+      <a href="screens/catalog.html" class="screen-card">
+        <div>
+          <div class="preview-stub">Catalog Preview</div>
+          <h2>ExploraciÃ³n</h2>
+          <p>CatÃ¡logo dinÃ¡mico con filtros avanzados y visualizaciÃ³n de colecciones.</p>
+        </div>
+        <span class="badge">Pantalla 2</span>
+      </a>
+
+      <a href="screens/product-detail.html" class="screen-card">
+        <div>
+          <div class="preview-stub">Detail Preview</div>
+          <h2>Detalle Inmersivo</h2>
+          <p>Ficha de producto con enfoque en materiales, acabado y personalizaciÃ³n.</p>
+        </div>
+        <span class="badge">Pantalla 3</span>
+      </a>
+
+      <a href="screens/cart.html" class="screen-card">
+        <div>
+          <div class="preview-stub">Cart Preview</div>
+          <h2>Bolsa de Compra</h2>
+          <p>GestiÃ³n de productos seleccionados con estÃ©tica minimalista.</p>
+        </div>
+        <span class="badge">Pantalla 4</span>
+      </a>
+
+      <a href="screens/checkout.html" class="screen-card">
+        <div>
+          <div class="preview-stub">Checkout Preview</div>
+          <h2>Pago Seguro</h2>
+          <p>Flujo de finalizaciÃ³n de compra optimizado y sin distracciones.</p>
+        </div>
+        <span class="badge">Pantalla 5</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

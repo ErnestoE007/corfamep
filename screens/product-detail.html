@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Silla ErgÃ³n Pro Â· Corfamep</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f7;
+      --surface-warm: #fbfbfd;
+      --fg: #1d1d1f;
+      --fg-2: #424245;
+      --muted: #6e6e73;
+      --meta: #86868b;
+      --border: #d2d2d7;
+      --border-soft: #e8e8ed;
+      --accent: #0071e3;
+      --accent-on: #ffffff;
+      --accent-hover: #0077ed;
+      --accent-active: #0066cc;
+      --font-display: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-body: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 980px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1024px;
+      margin-inline: auto;
+      padding-inline: 22px;
+    }
+
+    /* Topnav */
+    .topnav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 12px; }
+    .logo { font-family: var(--font-display); font-size: 21px; font-weight: 600; text-decoration: none; color: inherit; }
+    nav a { font-size: 12px; color: var(--fg-2); text-decoration: none; margin-left: 24px; }
+
+    /* Product Page Layout */
+    .product-main {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 60px;
+      padding-block: 60px;
+    }
+    @media (max-width: 900px) { .product-main { grid-template-columns: 1fr; } }
+
+    /* Gallery */
+    .gallery {
+      position: sticky; top: 100px;
+      height: fit-content;
+    }
+    .main-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: var(--surface);
+      border-radius: var(--radius-lg);
+      display: grid; place-items: center;
+      color: var(--border);
+      font-family: var(--font-mono);
+      margin-bottom: 20px;
+    }
+    .thumbs { display: flex; gap: 12px; }
+    .thumb {
+      width: 80px; height: 80px;
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-soft);
+      cursor: pointer;
+    }
+    .thumb.active { border-color: var(--accent); }
+
+    /* Info */
+    .product-info h1 { font-family: var(--font-display); font-size: 48px; font-weight: 600; margin: 0 0 8px; }
+    .price-sub { font-size: 21px; color: var(--fg-2); margin-bottom: 40px; }
+    
+    .section-title { font-size: 14px; font-weight: 600; margin-bottom: 12px; text-transform: uppercase; color: var(--muted); }
+    
+    .option-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 32px; }
+    .option-card {
+      padding: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .option-card:hover { border-color: var(--meta); }
+    .option-card.active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+    .option-card .label { font-size: 14px; font-weight: 500; }
+    .option-card .desc { font-size: 12px; color: var(--muted); }
+
+    .color-picker { display: flex; gap: 12px; margin-bottom: 40px; }
+    .color-btn {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      padding: 2px;
+      cursor: pointer;
+      background-clip: content-box;
+    }
+    .color-btn.active { border-color: var(--accent); }
+
+    .btn-buy {
+      width: 100%;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      font-size: 17px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+    .btn-buy:hover { background: var(--accent-hover); }
+
+    .benefit-row { display: flex; gap: 12px; font-size: 12px; color: var(--muted); margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-soft); }
+
+    /* Features Detail */
+    .detail-strip { background: var(--surface); padding-block: 80px; margin-top: 80px; }
+    .detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+    .detail-item h3 { font-family: var(--font-display); font-size: 24px; margin-bottom: 12px; }
+    .detail-item p { color: var(--muted); font-size: 15px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="container topnav-inner">
+      <a href="../index.html" class="logo">Corfamep</a>
+      <nav>
+        <a href="catalog.html">CatÃ¡logo</a>
+        <a href="#">Soluciones</a>
+        <a href="#">Soporte</a>
+        <a href="cart.html">Bolsa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="product-main">
+      <div class="gallery">
+        <div class="main-img">PRODUCT_HERO_IMAGE</div>
+        <div class="thumbs">
+          <div class="thumb active"></div>
+          <div class="thumb"></div>
+          <div class="thumb"></div>
+          <div class="thumb"></div>
+        </div>
+      </div>
+
+      <div class="product-info">
+        <p style="color: #b64400; font-weight: 600; font-size: 12px; margin-bottom: 8px;">Nuevo</p>
+        <h1>Silla ErgÃ³n Pro</h1>
+        <p class="price-sub">Desde $299.00 o $24.91/mes</p>
+
+        <div class="section-title">Acabado</div>
+        <div class="color-picker">
+          <div class="color-btn active" style="background-color: #1d1d1f;"></div>
+          <div class="color-btn" style="background-color: #e3e3e3;"></div>
+          <div class="color-btn" style="background-color: #c96442;"></div>
+          <div class="color-btn" style="background-color: #4a4a4a;"></div>
+        </div>
+
+        <div class="section-title">TamaÃ±o</div>
+        <div class="option-grid">
+          <div class="option-card active">
+            <div class="label">EstÃ¡ndar</div>
+            <div class="desc">Ideal para oficina en casa.</div>
+          </div>
+          <div class="option-card">
+            <div class="label">Grande</div>
+            <div class="desc">Para espacios amplios.</div>
+          </div>
+        </div>
+
+        <div class="section-title">Soporte Lumbar</div>
+        <div class="option-grid">
+          <div class="option-card active">
+            <div class="label">BÃ¡sico</div>
+            <div class="desc">Incluido</div>
+          </div>
+          <div class="option-card">
+            <div class="label">Pro-Adjust</div>
+            <div class="desc">+$49.00</div>
+          </div>
+        </div>
+
+        <button class="btn-buy">AÃ±adir a la bolsa</button>
+        <p style="text-align: center; font-size: 12px; color: var(--muted);">EnvÃo gratuito en todos los pedidos.</p>
+
+        <div class="benefit-row">
+          <div>âœ… 2 aÃ±os de garantÃa</div>
+          <div>âœ… DevoluciÃ³n en 14 dÃas</div>
+          <div>âœ… Soporte 24/7</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="detail-strip">
+    <div class="container">
+      <div class="detail-grid">
+        <div class="detail-item">
+          <h3>DiseÃ±o Consciente</h3>
+          <p>Fabricada con aluminio 100% reciclado y tejidos de origen sostenible. Un compromiso con el futuro.</p>
+        </div>
+        <div class="detail-item">
+          <h3>ErgonomÃa Total</h3>
+          <p>MÃ¡s de 12 puntos de ajuste para que la silla se adapte a ti, y no al revÃ©s. AdiÃ³s a la fatiga.</p>
+        </div>
+        <div class="detail-item">
+          <h3>Durabilidad Pro</h3>
+          <p>Probada para resistir mÃ¡s de 10 aÃ±os de uso intensivo. La calidad se siente en cada movimiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: var(--bg); padding-block: 60px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <span>Â© 2026 Corfamep. Todos los derechos reservados.</span>
+      <nav style="display: flex; gap: 24px;">
+        <a href="#" style="color: inherit; text-decoration: none;">Privacidad</a>
+        <a href="#" style="color: inherit; text-decoration: none;">TÃ©rminos</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

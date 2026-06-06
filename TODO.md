@@ -1,0 +1,7 @@
+- [completed] 1. Configurar tokens de diseño Apple y estructura de archivos
+- [completed] 2. Crear `index.html` (Lanzador/Galería de pantallas)
+- [completed] 3. Diseñar `screens/landing.html` (Home cinemático)
+- [completed] 4. Diseñar `screens/catalog.html` (Exploración de productos)
+- [completed] 5. Diseñar `screens/product-detail.html` (Ficha inmersiva)
+- [completed] 6. Diseñar `screens/cart.html` y `screens/checkout.html` (Flujo de compra)
+- [completed] 7. Validación final (Checklist P0 + Crítica 5-dim)

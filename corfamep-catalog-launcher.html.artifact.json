@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "kind": "html",
+  "title": "Catálogo Corfamep - Apple Style",
+  "entry": "corfamep-catalog-launcher.html",
+  "renderer": "html",
+  "status": "complete",
+  "exports": [
+    "html",
+    "pdf",
+    "zip"
+  ],
+  "primary": true,
+  "createdAt": "2026-06-04T23:08:33.796Z",
+  "updatedAt": "2026-06-04T23:08:33.799Z",
+  "sourceSkillId": "agent-browser",
+  "designSystemId": "apple",
+  "metadata": {
+    "identifier": "corfamep-catalog-launcher",
+    "artifactType": "text/html",
+    "inferred": false
+  }
+}

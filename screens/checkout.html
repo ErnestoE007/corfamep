@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finalizar compra Â· Corfamep</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f7;
+      --surface-warm: #fbfbfd;
+      --fg: #1d1d1f;
+      --fg-2: #424245;
+      --muted: #6e6e73;
+      --meta: #86868b;
+      --border: #d2d2d7;
+      --border-soft: #e8e8ed;
+      --accent: #0071e3;
+      --accent-on: #ffffff;
+      --accent-hover: #0077ed;
+      --accent-active: #0066cc;
+      --font-display: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-body: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 980px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .checkout-nav {
+      padding-block: 20px;
+      border-bottom: 1px solid var(--border-soft);
+      text-align: center;
+    }
+    .logo { font-family: var(--font-display); font-size: 21px; font-weight: 600; text-decoration: none; color: inherit; }
+
+    .main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding-inline: 22px;
+    }
+
+    h1 { font-family: var(--font-display); font-size: 32px; font-weight: 600; margin-bottom: 40px; }
+
+    .grid { display: grid; grid-template-columns: 1fr 300px; gap: 60px; }
+    @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+
+    .section-title { font-size: 24px; font-weight: 600; margin-bottom: 24px; padding-top: 40px; border-top: 1px solid var(--border-soft); }
+    .section-title:first-of-type { border-top: 0; padding-top: 0; }
+
+    .field-group { margin-bottom: 24px; }
+    label { display: block; font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+    input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-size: 17px;
+      outline: none;
+    }
+    input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1); }
+
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .order-summary {
+      background: var(--surface);
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      height: fit-content;
+    }
+    .order-summary h2 { font-size: 19px; margin: 0 0 20px; }
+    .sum-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 10px; color: var(--fg-2); }
+    .total { border-top: 1px solid var(--border); margin-top: 16px; padding-top: 16px; font-weight: 600; font-size: 17px; color: var(--fg); }
+
+    .btn-pay {
+      width: 100%;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 16px;
+      border-radius: var(--radius-md);
+      font-size: 17px;
+      font-weight: 600;
+      margin-top: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav class="checkout-nav">
+    <a href="../index.html" class="logo">Corfamep</a>
+  </nav>
+
+  <main class="main">
+    <h1>Finalizar pedido.</h1>
+
+    <div class="grid">
+      <div class="form">
+        <div class="section-title">DirecciÃ³n de envÃo</div>
+        <div class="field-group">
+          <label>Nombre completo</label>
+          <input type="text" placeholder="Nombre y apellidos">
+        </div>
+        <div class="field-group">
+          <label>Calle y nÃºmero</label>
+          <input type="text" placeholder="DirecciÃ³n">
+        </div>
+        <div class="row">
+          <div class="field-group">
+            <label>CÃ³digo Postal</label>
+            <input type="text" placeholder="CP">
+          </div>
+          <div class="field-group">
+            <label>Ciudad</label>
+            <input type="text" placeholder="Ciudad">
+          </div>
+        </div>
+
+        <div class="section-title">InformaciÃ³n de pago</div>
+        <div class="field-group">
+          <label>NÃºmero de tarjeta</label>
+          <input type="text" placeholder="â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢ â€¢â€¢â€¢â€¢">
+        </div>
+        <div class="row">
+          <div class="field-group">
+            <label>Caducidad (MM/AA)</label>
+            <input type="text" placeholder="MM/AA">
+          </div>
+          <div class="field-group">
+            <label>CVV</label>
+            <input type="text" placeholder="CVV">
+          </div>
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <h2>Resumen</h2>
+        <div class="sum-row">
+          <span>Subtotal</span>
+          <span>$348.00</span>
+        </div>
+        <div class="sum-row">
+          <span>EnvÃo</span>
+          <span>Gratis</span>
+        </div>
+        <div class="sum-row total">
+          <span>Total</span>
+          <span>$348.00</span>
+        </div>
+        <button class="btn-pay">Pagar ahora</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

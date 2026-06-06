@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CatÃ¡logo Â· Corfamep</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f7;
+      --surface-warm: #fbfbfd;
+      --fg: #1d1d1f;
+      --fg-2: #424245;
+      --muted: #6e6e73;
+      --meta: #86868b;
+      --border: #d2d2d7;
+      --border-soft: #e8e8ed;
+      --accent: #0071e3;
+      --accent-on: #ffffff;
+      --accent-hover: #0077ed;
+      --accent-active: #0066cc;
+      --font-display: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-body: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 980px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1024px;
+      margin-inline: auto;
+      padding-inline: 22px;
+    }
+
+    /* Nav bar idÃ©ntico al de landing */
+    .topnav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 12px; }
+    .logo { font-family: var(--font-display); font-size: 21px; font-weight: 600; text-decoration: none; color: inherit; }
+    nav a { font-size: 12px; color: var(--fg-2); text-decoration: none; margin-left: 24px; }
+
+    header.catalog-header {
+      padding-block: 60px 40px;
+    }
+    h1 { font-family: var(--font-display); font-size: 48px; font-weight: 600; margin: 0; }
+
+    /* Category bar */
+    .category-nav {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 40px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .category-nav::-webkit-scrollbar { display: none; }
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--fg-2);
+      min-width: 80px;
+      transition: color 0.2s;
+    }
+    .category-item.active { color: var(--accent); }
+    .category-icon {
+      width: 48px; height: 48px;
+      background: var(--surface);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      font-size: 24px;
+    }
+    .category-item.active .category-icon { background: var(--surface-warm); box-shadow: 0 0 0 2px var(--accent); }
+    .category-label { font-size: 12px; font-weight: 500; }
+
+    /* Product Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 80px;
+    }
+    @media (max-width: 768px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 480px) { .grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--bg);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border-soft);
+      transition: box-shadow 0.3s ease;
+    }
+    .card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.04); }
+    
+    .card .img-wrap {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      margin-bottom: 20px;
+      display: grid; place-items: center;
+      color: var(--border);
+      font-family: var(--font-mono);
+      font-size: 10px;
+    }
+    .card .colors { display: flex; gap: 6px; margin-bottom: 12px; }
+    .color-dot { width: 12px; height: 12px; border-radius: 50%; border: 1px solid var(--border); }
+
+    .card .meta { font-size: 12px; color: #b64400; font-weight: 600; margin-bottom: 4px; }
+    .card h3 { font-family: var(--font-display); font-size: 19px; font-weight: 600; margin: 0 0 4px; }
+    .card .price { font-size: 14px; color: var(--fg-2); }
+
+    .footer {
+      background: var(--surface);
+      padding-block: 60px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="container topnav-inner">
+      <a href="../index.html" class="logo">Corfamep</a>
+      <nav>
+        <a href="catalog.html" style="color: var(--fg);">CatÃ¡logo</a>
+        <a href="#">Soluciones</a>
+        <a href="#">Soporte</a>
+        <a href="cart.html">Bolsa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <header class="catalog-header">
+      <h1>Tienda. <span style="color: var(--muted);">La mejor forma de comprar tus muebles favoritos.</span></h1>
+    </header>
+
+    <div class="category-nav">
+      <a href="#" class="category-item active">
+        <div class="category-icon">ðŸª‘</div>
+        <span class="category-label">Todos</span>
+      </a>
+      <a href="#" class="category-item">
+        <div class="category-icon">ðŸª‘</div>
+        <span class="category-label">Sillas</span>
+      </a>
+      <a href="#" class="category-item">
+        <div class="category-icon">ðŸ–¥ï¸</div>
+        <span class="category-label">Escritorios</span>
+      </a>
+      <a href="#" class="category-item">
+        <div class="category-icon">ðŸ’¡</div>
+        <span class="category-label">IluminaciÃ³n</span>
+      </a>
+      <a href="#" class="category-item">
+        <div class="category-icon">ðŸ—„ï¸</div>
+        <span class="category-label">Archivo</span>
+      </a>
+      <a href="#" class="category-item">
+        <div class="category-icon">âœ¨</div>
+        <span class="category-label">Novedades</span>
+      </a>
+    </div>
+
+    <div class="grid">
+      <!-- Producto 1 -->
+      <a href="product-detail.html" class="card">
+        <div class="img-wrap">PRODUCT_IMAGE</div>
+        <div class="colors">
+          <div class="color-dot" style="background: #1d1d1f;"></div>
+          <div class="color-dot" style="background: #e3e3e3;"></div>
+          <div class="color-dot" style="background: #c96442;"></div>
+        </div>
+        <div class="meta">Nuevo</div>
+        <h3>Silla ErgÃ³n Pro</h3>
+        <div class="price">Desde $299.00</div>
+      </a>
+      <!-- Producto 2 -->
+      <a href="product-detail.html" class="card">
+        <div class="img-wrap">PRODUCT_IMAGE</div>
+        <div class="colors">
+          <div class="color-dot" style="background: #1d1d1f;"></div>
+          <div class="color-dot" style="background: #4a4a4a;"></div>
+        </div>
+        <h3>Escritorio Nexus Air</h3>
+        <div class="price">Desde $549.00</div>
+      </a>
+      <!-- Producto 3 -->
+      <a href="product-detail.html" class="card">
+        <div class="img-wrap">PRODUCT_IMAGE</div>
+        <div class="colors">
+          <div class="color-dot" style="background: #ffffff;"></div>
+        </div>
+        <h3>Luz Aura Mini</h3>
+        <div class="price">$129.00</div>
+      </a>
+      <!-- Producto 4 -->
+      <a href="product-detail.html" class="card">
+        <div class="img-wrap">PRODUCT_IMAGE</div>
+        <div class="colors">
+          <div class="color-dot" style="background: #e3e3e3;"></div>
+        </div>
+        <h3>Archivo Core 2</h3>
+        <div class="price">$199.00</div>
+      </a>
+      <!-- Producto 5 -->
+      <a href="product-detail.html" class="card">
+        <div class="img-wrap">PRODUCT_IMAGE</div>
+        <div class="colors">
+          <div class="color-dot" style="background: #1d1d1f;"></div>
+        </div>
+        <div class="meta">Popular</div>
+        <h3>Silla ErgÃ³n Lite</h3>
+        <div class="price">$179.00</div>
+      </a>
+      <!-- Producto 6 -->
+      <a href="product-detail.html" class="card">
+        <div class="img-wrap">PRODUCT_IMAGE</div>
+        <div class="colors">
+          <div class="color-dot" style="background: #c96442;"></div>
+        </div>
+        <h3>Escritorio Nexus Studio</h3>
+        <div class="price">$899.00</div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Â© 2026 Corfamep. Todos los derechos reservados.</span>
+      <nav>
+        <a href="#">PolÃtica de privacidad</a>
+        <a href="#">TÃ©rminos de uso</a>
+        <a href="#">Ventas y reembolsos</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

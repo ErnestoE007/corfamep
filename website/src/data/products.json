@@ -3,323 +3,122 @@
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195717.png",
     "name": "Alcohol Nooa Líquido Antibacterial",
     "category": "Personal Hygiene & Disinfection",
-    "description": "A high-efficacy antibacterial liquid alcohol designed for rapid disinfection of hands and surfaces, ensuring a germ-free environment for your family or business.",
-    "benefits": [
-      "Rapid elimination of 99.9% of germs",
-      "Versatile application for skin and surfaces",
-      "Available in multiple sizes for every need"
-    ],
-    "characteristics": [
-      "Antibacterial formula",
-      "Liquid consistency",
-      "Fast-drying"
-    ],
-    "presentation": "Multiple: 120ml, 500ml, 1000ml, and Gallon"
+    "description": "A high-efficacy antibacterial liquid alcohol designed for rapid disinfection of hands and surfaces.",
+    "benefits": ["Rapid elimination of 99.9% of germs", "Versatile application", "Available in multiple sizes"],
+    "characteristics": ["Antibacterial formula", "Liquid consistency", "Fast-drying"],
+    "presentation": "120ml, 500ml, 1000ml, Gallon"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195708.png",
     "name": "Sabi Gel Cosmetic",
-    "category": "Personal Care / Hair Care",
-    "description": "Premium hair styling gel that combines extreme hold with deep nourishment. Formulated with silicone and aloe vera to keep hair healthy and perfectly styled all day.",
-    "benefits": [
-      "Extreme hold without stiffness",
-      "Nourishes and strengthens hair follicles",
-      "Alcohol-free formula to prevent dryness"
-    ],
-    "characteristics": [
-      "Contains Aloe Vera and Panthenol",
-      "Enriched with Silicone",
-      "Alcohol-free"
-    ],
-    "presentation": "Available in Tube, Pouch, and Jar"
+    "category": "Personal Care",
+    "description": "Premium hair styling gel that combines extreme hold with deep nourishment.",
+    "benefits": ["Extreme hold", "Nourishes hair", "Alcohol-free"],
+    "characteristics": ["Aloe Vera and Panthenol", "Enriched with Silicone", "Alcohol-free"],
+    "presentation": "Tube, Pouch, Jar"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195652.png",
     "name": "Jabón de Baño Nooa Antibacterial",
     "category": "Personal Hygiene",
-    "description": "A professional-grade antibacterial bath soap that provides deep cleansing while protecting the skin from harmful bacteria, leaving a refreshing scent.",
-    "benefits": [
-      "Deep antibacterial protection",
-      "Leaves skin feeling fresh and clean",
-      "Variety of fragrances for personalized care"
-    ],
-    "characteristics": [
-      "Antibacterial properties",
-      "Bar soap format",
-      "Fragrances: Citrus, Sport, Aloe, Herbal, Avena, Manzanilla"
-    ],
+    "description": "Professional-grade antibacterial bath soap for deep cleansing and skin protection.",
+    "benefits": ["Deep protection", "Fresh feeling", "Multiple fragrances"],
+    "characteristics": ["Antibacterial", "Bar soap", "Various scents"],
     "presentation": "Box of 24 units"
-  },
-  {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195644.png",
-    "name": "Sabi Gel Cosmetic (Pouch)",
-    "category": "Personal Care / Hair Care",
-    "description": "Convenient pouch presentation of our professional hair gel, ideal for those who seek a natural look with strong hold and hair protection.",
-    "benefits": [
-      "Easy-to-use pouch packaging",
-      "Fortifies and nourishes hair naturally",
-      "Non-alcoholic for hair health"
-    ],
-    "characteristics": [
-      "With Panthenol, Silicone, and Aloe Vera",
-      "Alcohol-free",
-      "Strong hold"
-    ],
-    "presentation": "120g Pouch"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195635.png",
     "name": "Cloro Nooa Concentrado",
-    "category": "Home & Industrial Cleaning",
-    "description": "Powerful concentrated bleach designed for maximum whitening and total disinfection of floors, bathrooms, and white fabrics.",
-    "benefits": [
-      "High concentration for superior cleaning",
-      "Eliminates tough stains and pathogens",
-      "Cost-effective professional formula"
-    ],
-    "characteristics": [
-      "Concentrated bleach",
-      "Multipurpose disinfectant",
-      "Whitening agent"
-    ],
+    "category": "Home Cleaning",
+    "description": "Powerful concentrated bleach for maximum whitening and total disinfection.",
+    "benefits": ["Superior cleaning", "Eliminates pathogens", "Cost-effective"],
+    "characteristics": ["Concentrated", "Multipurpose", "Whitening"],
     "presentation": "Gallon (Box of 6)"
-  },
-  {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195626.png",
-    "name": "Cloro Nooa Concentrado (Professional)",
-    "category": "Home & Industrial Cleaning",
-    "description": "Industrial-strength concentrated bleach that ensures a sterile and bright environment, perfect for high-traffic areas and deep cleaning.",
-    "benefits": [
-      "Professional grade disinfection",
-      "Maximum brightness for white surfaces",
-      "Efficient and fast-acting"
-    ],
-    "characteristics": [
-      "Concentrated formula",
-      "High chlorine content",
-      "Disinfectant"
-    ],
-    "presentation": "Gallon"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195622.png",
     "name": "Toallas Z para Manos Nooa",
-    "category": "Personal Hygiene / Paper Products",
-    "description": "Premium Z-fold hand towels made from natural fibers, offering superior absorbency and softness for a hygienic drying experience.",
-    "benefits": [
-      "100% natural and biodegradable",
-      "Extra soft on the skin",
-      "Highly absorbent for efficient drying"
-    ],
-    "characteristics": [
-      "Z-fold design for single-sheet dispensing",
-      "Natural fiber composition",
-      "High absorbency"
-    ],
+    "category": "Paper Products",
+    "description": "Premium Z-fold hand towels made from natural fibers, offering superior absorbency.",
+    "benefits": ["100% natural", "Extra soft", "Highly absorbent"],
+    "characteristics": ["Z-fold design", "Natural fibers", "High absorbency"],
     "presentation": "Pack of 150 towels"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195619.png",
-    "name": "Jabón Líquido Nooa Antibacterial (Galón)",
+    "name": "Jabón Líquido Nooa Antibacterial",
     "category": "Personal Hygiene",
-    "description": "Bulk antibacterial liquid soap that combines powerful hygiene with moisturizing properties, available in a variety of refreshing fragrances.",
-    "benefits": [
-      "Economical bulk presentation",
-      "Effective antibacterial protection",
-      "Moisturizes while cleaning"
-    ],
-    "characteristics": [
-      "Liquid soap",
-      "Antibacterial formula",
-      "Various fragrances (e.g., Apple Cinnamon)"
-    ],
-    "presentation": "Gallon (Box of 7)"
-  },
-  {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195614.png",
-    "name": "Jabón Líquido Nooa Antibacterial (Pump)",
-    "category": "Personal Hygiene",
-    "description": "Elegant pump-dispenser antibacterial soap, perfect for bathrooms and kitchens, providing a luxurious feel and total protection.",
-    "benefits": [
-      "Convenient pump dispensing",
-      "Protects against common germs",
-      "Pleasant and lasting aroma"
-    ],
-    "characteristics": [
-      "Liquid antibacterial soap",
-      "Skin-friendly pH",
-      "Pump bottle"
-    ],
-    "presentation": "Pump Bottle"
-  },
-  {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195606.png",
-    "name": "Jabón Líquido Nooa Antibacterial (Premium)",
-    "category": "Personal Hygiene",
-    "description": "A premium antibacterial liquid soap designed for those who value both hygiene and skin care, leaving hands soft and smelling fresh.",
-    "benefits": [
-      "Superior hygiene standard",
-      "Gentle on the skin",
-      "Refreshing fragrance"
-    ],
-    "characteristics": [
-      "Liquid soap",
-      "Antibacterial",
-      "Moisturizing agents"
-    ],
-    "presentation": "Pump Bottle"
+    "description": "Bulk antibacterial liquid soap combining hygiene with moisturizing properties.",
+    "benefits": ["Economical bulk", "Effective protection", "Moisturizes skin"],
+    "characteristics": ["Liquid soap", "Antibacterial", "Various fragrances"],
+    "presentation": "Gallon"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195600.png",
     "name": "Detergente Nooa",
     "category": "Home Cleaning",
-    "description": "High-performance detergent formulated to remove the toughest stains while preserving the colors and integrity of your fabrics.",
-    "benefits": [
-      "Impeccable cleanliness in every wash",
-      "Protects fabric fibers and colors",
-      "Leaves a long-lasting fresh scent"
-    ],
-    "characteristics": [
-      "Powerful stain removal",
-      "Fabric care formula",
-      "Available in powder and liquid"
-    ],
+    "description": "High-performance detergent formulated to remove toughest stains while preserving colors.",
+    "benefits": ["Impeccable cleanliness", "Protects fabrics", "Fresh scent"],
+    "characteristics": ["Powerful stain removal", "Fabric care", "Powder/Liquid"],
     "presentation": "Various packs"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195556.png",
-    "name": "Cloro Nooa Concentrado (1000ml)",
+    "name": "Cloro Nooa Concentrado (1L)",
     "category": "Home Cleaning",
-    "description": "The ideal size for home use, this concentrated bleach provides powerful disinfection and whitening for a spotless home.",
-    "benefits": [
-      "Effective germ elimination",
-      "Perfect for daily household disinfection",
-      "Easy-to-handle bottle"
-    ],
-    "characteristics": [
-      "Concentrated bleach",
-      "Disinfectant",
-      "Whitening agent"
-    ],
-    "presentation": "1000ml Bottle (Box of 20 units)"
-  },
-  {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195546.png",
-    "name": "Sabi Gel Cosmetic (Travel Pouch)",
-    "category": "Personal Care / Hair Care",
-    "description": "Professional hair styling gel in a travel-friendly pouch, ensuring your style remains perfect wherever you go.",
-    "benefits": [
-      "Portable and leak-proof",
-      "Natural nourishment with Aloe Vera",
-      "Strong, alcohol-free hold"
-    ],
-    "characteristics": [
-      "With Aloe Vera and Panthenol",
-      "Alcohol-free",
-      "Professional hold"
-    ],
-    "presentation": "Pouch"
-  },
-  {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195529.png",
-    "name": "Jabón Líquido Nooa Antibacterial (Professional)",
-    "category": "Personal Hygiene",
-    "description": "Professional-grade antibacterial liquid soap designed for high-frequency use in commercial or home settings.",
-    "benefits": [
-      "Deep cleaning action",
-      "Maximum antibacterial protection",
-      "Refreshing scent"
-    ],
-    "characteristics": [
-      "Liquid soap",
-      "Antibacterial",
-      "Pump dispenser"
-    ],
-    "presentation": "Pump Bottle"
-  },
-  {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195519.png",
-    "name": "Jabón Líquido Nooa Antibacterial (Daily)",
-    "category": "Personal Hygiene",
-    "description": "A gentle yet effective antibacterial liquid soap for daily hand washing, keeping your family safe and your skin soft.",
-    "benefits": [
-      "Removes impurities and germs",
-      "Protects skin from dryness",
-      "Fresh, clean aroma"
-    ],
-    "characteristics": [
-      "Liquid soap",
-      "Antibacterial",
-      "Pump bottle"
-    ],
-    "presentation": "Pump Bottle"
+    "description": "Ideal size for home use, provides powerful disinfection and whitening.",
+    "benefits": ["Effective germ elimination", "Daily disinfection", "Easy handling"],
+    "characteristics": ["Concentrated", "Disinfectant", "Whitening"],
+    "presentation": "1000ml Bottle"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195450.png",
     "name": "Shampoo Nooa Línea Hotelera",
-    "category": "Personal Care / Hotel Supplies",
-    "description": "Luxury hotel-grade shampoo designed to provide guests with a refreshing and high-quality bathing experience.",
-    "benefits": [
-      "Gentle on hair and scalp",
-      "Professional fragrance",
-      "Hygienic individual packaging"
-    ],
-    "characteristics": [
-      "Hotel line formula",
-      "Individual sachet",
-      "Refreshing scent"
-    ],
-    "presentation": "Box of 30 packs x 10 sachets"
+    "category": "Hotel Supplies",
+    "description": "Luxury hotel-grade shampoo for a refreshing and high-quality experience.",
+    "benefits": ["Gentle on scalp", "Professional fragrance", "Hygienic packaging"],
+    "characteristics": ["Hotel formula", "Sachet", "Refreshing scent"],
+    "presentation": "Box of 30 packs"
   },
   {
     "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195431.png",
     "name": "Jabón Individual Hotelero Nooa",
-    "category": "Personal Care / Hotel Supplies",
-    "description": "Compact, high-quality individual soap bars perfect for hotels, guest houses, or travel kits.",
-    "benefits": [
-      "Maximum hygiene for guests",
-      "Portable and convenient",
-      "Effective cleaning in a small size"
-    ],
-    "characteristics": [
-      "Individual bar",
-      "10 grams",
-      "Hotel grade"
-    ],
+    "category": "Hotel Supplies",
+    "description": "Compact high-quality individual soap bars perfect for hotels and travel.",
+    "benefits": ["Maximum hygiene", "Portable", "Effective cleaning"],
+    "characteristics": ["Individual bar", "10 grams", "Hotel grade"],
     "presentation": "10g Individual Bar"
   },
   {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195407.png",
-    "name": "Catálogo de Productos Nooa",
-    "category": "General Catalog",
-    "description": "A comprehensive showcase of the Nooa product line, offering quality, freshness, and protection for the entire family.",
-    "benefits": [
-      "One-stop shop for hygiene and cleaning",
-      "Guaranteed manufacturer quality",
-      "Direct prices for better value"
-    ],
-    "characteristics": [
-      "Diverse product range",
-      "Family-oriented solutions",
-      "Manufacturer direct"
-    ],
-    "presentation": "Product Catalog"
+    "name": "Desinfectante Multisuperficies",
+    "category": "Home Cleaning",
+    "description": "Advanced formula for total disinfection of all types of surfaces, leaving a fresh aroma.",
+    "benefits": ["Broad spectrum disinfection", "No residue", "Fresh scent"],
+    "characteristics": ["Multisurface", "Fast acting", "Non-corrosive"],
+    "presentation": "Gallon / 1L"
   },
   {
-    "image_path": "E:\\Proyectos\\corfamep\\productos\\Captura de pantalla 2026-05-28 195208.png",
-    "name": "Línea de Productos Nooa",
-    "category": "General Catalog",
-    "description": "Professional manufacturing of cleaning and personal hygiene products, offering wholesale and retail options with guaranteed quality.",
-    "benefits": [
-      "Direct from manufacturer prices",
-      "Wholesale and retail availability",
-      "Comprehensive hygiene solutions"
-    ],
-    "characteristics": [
-      "Manufacturer direct",
-      "Wide variety of cleaning agents",
-      "Personal care specialists"
-    ],
-    "presentation": "Product List"
+    "name": "Jabón de Lavar en Barra",
+    "category": "Home Cleaning",
+    "description": "Traditional high-efficiency laundry soap for the toughest stains on fabrics.",
+    "benefits": ["Deep cleaning", "Efficient degreasing", "Long lasting"],
+    "characteristics": ["Bar format", "High concentration", "Biodegradable"],
+    "presentation": "Unit / Pack"
+  },
+  {
+    "name": "Suavizante de Ropa",
+    "category": "Home Cleaning",
+    "description": "Premium fabric softener that provides exceptional softness and a long-lasting fragrance.",
+    "benefits": ["Anti-static", "Softness", "Irresistible scent"],
+    "characteristics": ["Concentrated formula", "Fabric protection", "Fragrance stay"],
+    "presentation": "Gallon / 1L"
+  },
+  {
+    "name": "Servilletas de Papel",
+    "category": "Paper Products",
+    "description": "High-absorbency disposable napkins for all occasions, soft and resistant.",
+    "benefits": ["Ultra absorbent", "Soft texture", "Eco-friendly"],
+    "characteristics": ["Interfolded", "White", "Natural fiber"],
+    "presentation": "Pack / Box"
   }
 ]

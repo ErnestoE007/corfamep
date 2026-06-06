@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Corfamep Â· DiseÃ±o que inspira</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f5f7;
+      --surface-warm: #fbfbfd;
+      --fg: #1d1d1f;
+      --fg-2: #424245;
+      --muted: #6e6e73;
+      --meta: #86868b;
+      --border: #d2d2d7;
+      --border-soft: #e8e8ed;
+      --accent: #0071e3;
+      --accent-on: #ffffff;
+      --accent-hover: #0077ed;
+      --accent-active: #0066cc;
+      --font-display: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-body: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 980px;
+      --elev-raised: 0 12px 32px rgba(0, 0, 0, 0.08);
+      --motion-base: 220ms;
+      --ease-standard: cubic-bezier(0.28, 0, 0.22, 1);
+      
+      --fs-h1: clamp(56px, 8vw, 80px);
+      --fs-h2: clamp(40px, 5vw, 56px);
+      --fs-h3: 28px;
+      --fs-body: 17px;
+      --gap-2xl: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      line-height: 1.47;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1024px;
+      margin-inline: auto;
+      padding-inline: 22px;
+    }
+
+    .section {
+      padding-block: var(--gap-2xl);
+    }
+
+    .topnav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .topnav-inner { display: flex; align-items: center; justify-content: space-between; padding-block: 12px; }
+    .logo { font-family: var(--font-display); font-size: 21px; font-weight: 600; letter-spacing: -0.02em; }
+    nav a { font-size: 12px; color: var(--fg-2); text-decoration: none; margin-left: 24px; }
+    nav a:hover { color: var(--accent); }
+
+    /* Hero CinemÃ¡tico */
+    .hero {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding-block: 120px;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: var(--fs-h1);
+      font-weight: 600;
+      letter-spacing: -0.015em;
+      margin: 0 0 12px;
+      background: linear-gradient(180deg, #fff 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 24px;
+      color: #a1a1a6;
+      max-width: 25ch;
+      margin: 0 auto 40px;
+    }
+    .btn-pill {
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: var(--radius-pill);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 17px;
+      transition: background var(--motion-base);
+    }
+    .btn-pill:hover { background: var(--accent-hover); }
+
+    /* Secciones de Producto */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 12px;
+    }
+    .product-card {
+      background: var(--surface);
+      border-radius: 28px;
+      padding: 60px;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 500px;
+      justify-content: flex-start;
+    }
+    .product-card.dark { background: #000; color: #fff; }
+    .product-card h2 { font-family: var(--font-display); font-size: 40px; font-weight: 600; margin: 0 0 8px; }
+    .product-card p { font-size: 21px; margin: 0 0 20px; color: var(--fg-2); }
+    .product-card.dark p { color: #a1a1a6; }
+    
+    .ph-img {
+      width: 100%;
+      height: 300px;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      margin-top: auto;
+      display: grid; place-items: center;
+      color: var(--border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+    .dark .ph-img { background: #1d1d1f; border: 1px solid #333; }
+
+    .footer {
+      background: var(--surface);
+      padding-block: 60px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="container topnav-inner">
+      <a href="../index.html" class="logo">Corfamep</a>
+      <nav>
+        <a href="catalog.html">CatÃ¡logo</a>
+        <a href="#">Soluciones</a>
+        <a href="#">Soporte</a>
+        <a href="cart.html">Bolsa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Pro. En todos los sentidos.</h1>
+        <p>DiseÃ±o industrial de vanguardia para entornos que exigen lo mejor.</p>
+        <a href="catalog.html" class="btn-pill">Ver colecciones</a>
+      </div>
+    </section>
+
+    <div class="product-grid">
+      <a href="product-detail.html" class="product-card">
+        <h2>Silla ErgÃ³n</h2>
+        <p>La perfecciÃ³n del confort.</p>
+        <div class="ph-img">PRODUCT_VISUAL_01</div>
+      </a>
+      <a href="product-detail.html" class="product-card dark">
+        <h2>Escritorio Nexus</h2>
+        <p>Espacio para tus grandes ideas.</p>
+        <div class="ph-img">PRODUCT_VISUAL_02</div>
+      </a>
+      <a href="product-detail.html" class="product-card dark">
+        <h2>Luz Aura</h2>
+        <p>IluminaciÃ³n inteligente.</p>
+        <div class="ph-img">PRODUCT_VISUAL_03</div>
+      </a>
+      <a href="product-detail.html" class="product-card">
+        <h2>Archivo Core</h2>
+        <p>OrganizaciÃ³n sin esfuerzo.</p>
+        <div class="ph-img">PRODUCT_VISUAL_04</div>
+      </a>
+    </div>
+
+    <section class="section" style="text-align: center;">
+      <div class="container">
+        <h2 style="font-family: var(--font-display); font-size: 48px; margin-bottom: 24px;">Compromiso con la excelencia.</h2>
+        <p style="font-size: 21px; color: var(--muted); max-width: 40ch; margin: 0 auto 40px;">Utilizamos materiales de primera calidad y procesos de fabricaciÃ³n sostenibles para crear productos que duran toda la vida.</p>
+        <a href="#" style="color: var(--accent); text-decoration: none; font-size: 21px; font-weight: 500;">MÃ¡s informaciÃ³n sobre nosotros ></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>Â© 2026 Corfamep. Todos los derechos reservados.</span>
+      <nav>
+        <a href="#">PolÃtica de privacidad</a>
+        <a href="#">TÃ©rminos de uso</a>
+        <a href="#">Ventas y reembolsos</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

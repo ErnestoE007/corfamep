@@ -7,59 +7,63 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-bg-primary">
-      {/* Background Abstract Shape */}
-      <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-bg-secondary blur-3xl opacity-60 -z-10" />
-      <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent/10 blur-3xl opacity-60 -z-10" />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black text-white">
+      {/* Cinematic Background Elements */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full overflow-hidden -z-10">
+        <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[80%] h-[80%] rounded-full bg-blue-600/10 blur-[120px]" />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center z-10">
         <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
           className="text-left"
         >
-          <h1 className="text-5xl lg:text-7xl font-bold text-text-main tracking-tighter leading-tight mb-6">
-            Pureza que <br />
-            <span className="text-accent">Transforma</span> Espacios.
+          <motion.span 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 1 }}
+            className="inline-block text-blue-500 font-semibold tracking-widest uppercase text-sm mb-4"
+          >
+            Nueva Línea NOOA Pro
+          </motion.span>
+          <h1 className="text-6xl lg:text-8xl font-bold tracking-tighter leading-tight mb-6 bg-gradient-to-b from-white to-gray-500 bg-clip-text text-transparent">
+            Pureza. <br />
+            Sin concesiones.
           </h1>
-          <p className="text-lg text-text-muted mb-10 max-w-lg leading-relaxed">
-            Soluciones avanzadas de higiene y limpieza profesional. Elevamos el estándar de cuidado para el hogar, la industria y la salud.
+          <p className="text-xl text-gray-400 mb-10 max-w-lg leading-relaxed font-light">
+            Ingeniería avanzada en higiene. Diseñados para superar los estándares más exigentes de la industria y el hogar.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-6">
             <Link 
               href="/catalogo" 
-              className="btn-apple bg-text-main text-white px-8 py-4 text-lg font-medium flex items-center justify-center gap-2 group"
+              className="px-8 py-4 bg-white text-black rounded-full text-lg font-medium hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 group"
             >
               Explorar Catálogo 
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
-              href="/contacto" 
-              className="btn-apple bg-bg-secondary text-text-main px-8 py-4 text-lg font-medium text-center"
+              href="/nosotros" 
+              className="px-8 py-4 border border-gray-700 text-white rounded-full text-lg font-medium hover:bg-white/5 transition-colors text-center"
             >
-              Contacto Directo
+              Nuestra Tecnología
             </Link>
           </div>
         </motion.div>
 
         <motion.div 
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative flex justify-center items-center"
         >
-          {/* Main Hero Image - using a placeholder for now, will replace with real product */}
-          <div className="relative w-full aspect-square max-w-lg">
-            <div className="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent rounded-full blur-2xl" />
+          <div className="relative w-full aspect-square max-w-xl">
+            <div className="absolute inset-0 bg-blue-500/5 rounded-full blur-3xl" />
             <img 
-              src="/images/hero-product.png" 
-              alt="Premium Hygiene Product" 
-              className="relative z-10 w-full h-full object-contain drop-shadow-premium animate-float" 
-              onError={(e) => {
-                // Fallback if image not found
-                e.currentTarget.src = "https://via.placeholder.com/600x600?text=Premium+Product";
-              }}
+              src="/images/productos/Captura de pantalla 2026-05-28 195626.png" 
+              alt="Cloro Premium NOOA" 
+              className="relative z-10 w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] animate-float" 
             />
           </div>
         </motion.div>
@@ -67,11 +71,11 @@ const Hero = () => {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%, 100% { transform: translateY(0px) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(2deg); }
         }
         .animate-float {
-          animation: float 6s ease-in-out infinite;
+          animation: float 8s ease-in-out infinite;
         }
       `}</style>
     </section>
